@@ -31,18 +31,25 @@ package en
 //leetcode submit region begin(Prohibit modification and deletion)
 func fourSumCount(A []int, B []int, C []int, D []int) int {
 	ret := 0
-	for a := range A {
-		for b := range B {
-			for c := range C {
-				for d := range D {
-					if a+b+c+d == 0 {
-						ret++
-					}
-				}
+	ab := convertToMap(A, B)
+	cd := convertToMap(C, D)
+	for abk, abv := range ab {
+		for cdk, cdv := range cd {
+			if abk+cdk == 0 {
+				ret += abv * cdv
 			}
 		}
 	}
 	return ret
 }
 
+func convertToMap(A []int, B []int) map[int]int {
+	ab := make(map[int]int)
+	for _, a := range A {
+		for _, b := range B {
+			ab[a+b] = ab[a+b] + 1
+		}
+	}
+	return ab
+}
 //leetcode submit region end(Prohibit modification and deletion)

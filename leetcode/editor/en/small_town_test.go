@@ -14,3 +14,9 @@ func TestFourSumCount(t *testing.T) {
 	count := fourSumCount(a, b, c, d)
 	assert.True(t, count == 2)
 }
+
+func TestFizzBuzz(t *testing.T) {
+	n := 15
+	buzz := fizzBuzz(n)
+	assert.True(t, len(buzz) == n)
+}
