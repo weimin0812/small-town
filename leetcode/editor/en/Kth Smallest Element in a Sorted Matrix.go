@@ -1,4 +1,5 @@
 package en
+
 //Given a n x n matrix where each of the rows and columns are sorted in ascendin
 //g order, find the kth smallest element in the matrix. 
 //
@@ -27,6 +28,6 @@ package en
 
 //leetcode submit region begin(Prohibit modification and deletion)
 func kthSmallest(matrix [][]int, k int) int {
-
+	return 0
 }
 //leetcode submit region end(Prohibit modification and deletion)

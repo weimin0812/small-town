@@ -20,3 +20,10 @@ func TestFizzBuzz(t *testing.T) {
 	buzz := fizzBuzz(n)
 	assert.True(t, len(buzz) == n)
 }
+
+func TestTopKFrequent(t *testing.T) {
+	nums := []int{3, 2, 3, 1, 2, 4, 5, 5, 6, 7, 7, 8, 2, 3, 1, 1, 1, 10, 11, 5, 6, 2, 4, 7, 8, 5, 6}
+	k := 10
+	frequent := topKFrequent(nums, k)
+	assert.True(t, len(frequent) == k)
+}
