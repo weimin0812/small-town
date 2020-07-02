@@ -1,9 +1,5 @@
 package en
 
-import (
-	"sort"
-)
-
 //Given a non-empty array of integers, return the k most frequent elements.
 //
 // Example 1: 
@@ -35,22 +31,22 @@ import (
 
 //leetcode submit region begin(Prohibit modification and deletion)
 func topKFrequent(nums []int, k int) []int {
-	frequentMap := make(map[int]int)
+	feqMap := make(map[int]int)
 	for i := range nums {
-		frequentMap[nums[i]]++
+		feqMap[nums[i]]++
 	}
-	var unique []int
-	for k := range frequentMap {
-		unique = append(unique, k)
+	buckets := make([][]int, len(nums)+1)
+	for i := 0; i < len(buckets); i++ {
+		buckets[i] = make([]int, 0)
 	}
-	sort.Slice(unique, func(i, j int) bool {
-		return frequentMap[unique[i]] >= frequentMap[unique[j]]
-	})
-	var ret []int
-	for i := 0; i < k; i++ {
-		ret = append(ret, unique[i])
+	for num, feq := range feqMap {
+		buckets[feq] = append(buckets[feq], num)
 	}
-	return ret
+	var list []int
+	for i := len(buckets) - 1; i > 0; i-- {
+		list = append(list, buckets[i]...)
+	}
+	return list[:k]
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
