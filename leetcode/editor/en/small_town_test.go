@@ -27,3 +27,15 @@ func TestTopKFrequent(t *testing.T) {
 	frequent := topKFrequent(nums, k)
 	assert.True(t, len(frequent) == k)
 }
+
+func TestLengthOfLIS(t *testing.T) {
+	nums := []int{10, 9, 2, 5, 3, 7, 101, 18}
+	lis := lengthOfLIS(nums)
+	assert.True(t, lis == 4)
+}
+
+func TestTriplet(t *testing.T) {
+	nums := []int{2, 4, -2, -3}
+	triplet := increasingTriplet(nums)
+	assert.True(t, !triplet)
+}
