@@ -39,3 +39,10 @@ func TestTriplet(t *testing.T) {
 	triplet := increasingTriplet(nums)
 	assert.True(t, !triplet)
 }
+
+func TestFindMedianSortedArrays(t *testing.T) {
+	nums1 := []int{1, 2}
+	nums2 := []int{3, 4}
+	m := findMedianSortedArrays(nums1, nums2)
+	assert.True(t, m == 2.5)
+}
