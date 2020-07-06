@@ -14,8 +14,7 @@ package en
 //Because nums[0] + nums[1] = 2 + 7 = 9,
 //return [0, 1].
 // 
-// Related Topics Array Hash Table 
-// 👍 15534 👎 559
+// Related Topics Array Hash Table
 
 //leetcode submit region begin(Prohibit modification and deletion)
 func twoSum(nums []int, target int) []int {
