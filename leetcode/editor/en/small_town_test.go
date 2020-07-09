@@ -46,3 +46,9 @@ func TestFindMedianSortedArrays(t *testing.T) {
 	m := findMedianSortedArrays(nums1, nums2)
 	assert.True(t, m == 2.5)
 }
+
+func TestIsValid(t *testing.T) {
+	s := "()"
+	valid := isValid(s)
+	assert.True(t, valid)
+}
