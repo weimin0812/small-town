@@ -52,3 +52,9 @@ func TestIsValid(t *testing.T) {
 	valid := isValid(s)
 	assert.True(t, valid)
 }
+
+func TestLetterCombinations(t *testing.T) {
+	s := "23"
+	combinations := letterCombinations(s)
+	assert.True(t, len(combinations) == 9)
+}
