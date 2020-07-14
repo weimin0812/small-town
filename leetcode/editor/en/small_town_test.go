@@ -64,3 +64,10 @@ func TestRemoveDuplicates(t *testing.T) {
 	ret := removeDuplicates(nums)
 	assert.True(t, ret == 5)
 }
+
+func TestStrStr(t *testing.T) {
+	haystack := "a"
+	needle := "a"
+	index := strStr(haystack, needle)
+	assert.True(t, index == 2)
+}
