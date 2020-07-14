@@ -58,3 +58,9 @@ func TestLetterCombinations(t *testing.T) {
 	combinations := letterCombinations(s)
 	assert.True(t, len(combinations) == 9)
 }
+
+func TestRemoveDuplicates(t *testing.T) {
+	nums := []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4}
+	ret := removeDuplicates(nums)
+	assert.True(t, ret == 5)
+}
