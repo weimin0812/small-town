@@ -71,3 +71,9 @@ func TestStrStr(t *testing.T) {
 	index := strStr(haystack, needle)
 	assert.True(t, index == 2)
 }
+
+func TestDivide(t *testing.T) {
+	dividend, divisor := 7, -3
+	ret := divide(dividend, divisor)
+	assert.True(t, ret == -2)
+}
