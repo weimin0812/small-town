@@ -73,7 +73,7 @@ func TestStrStr(t *testing.T) {
 }
 
 func TestDivide(t *testing.T) {
-	dividend, divisor := 7, -3
+	dividend, divisor := -2147483648, -1
 	ret := divide(dividend, divisor)
 	assert.True(t, ret == -2)
 }
