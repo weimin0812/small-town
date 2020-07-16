@@ -1,6 +1,7 @@
 package en
 
 import (
+	"math"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -73,7 +74,7 @@ func TestStrStr(t *testing.T) {
 }
 
 func TestDivide(t *testing.T) {
-	dividend, divisor := -2147483648, -1
+	dividend, divisor := math.MaxInt32+10, 1
 	ret := divide(dividend, divisor)
 	assert.True(t, ret == -2)
 }
