@@ -97,3 +97,9 @@ func TestCountAndSay(t *testing.T) {
 	say := countAndSay(4)
 	assert.True(t, len(say) > 0)
 }
+
+func TestFirstMissingPositive(t *testing.T) {
+	array := []int{3, 4, -1, 1}
+	missingPositive := firstMissingPositive(array)
+	assert.True(t, missingPositive == 2)
+}
