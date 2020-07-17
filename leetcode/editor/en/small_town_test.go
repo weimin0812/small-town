@@ -78,3 +78,17 @@ func TestDivide(t *testing.T) {
 	ret := divide(dividend, divisor)
 	assert.True(t, ret == -2)
 }
+
+func TestIsValidSudoku(t *testing.T) {
+	board := make([][]byte, 9)
+	for i := 0; i < 9; i++ {
+		board[i] = make([]byte, 9)
+	}
+	for i := 0; i < 9; i++ {
+		for j := 0; j < 9; j++ {
+			board[i][j] = '.'
+		}
+	}
+	sudoku := isValidSudoku(board)
+	assert.True(t, sudoku)
+}
