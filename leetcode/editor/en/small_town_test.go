@@ -92,3 +92,8 @@ func TestIsValidSudoku(t *testing.T) {
 	sudoku := isValidSudoku(board)
 	assert.True(t, sudoku)
 }
+
+func TestCountAndSay(t *testing.T) {
+	say := countAndSay(4)
+	assert.True(t, len(say) > 0)
+}
