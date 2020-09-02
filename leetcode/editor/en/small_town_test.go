@@ -103,3 +103,8 @@ func TestFirstMissingPositive(t *testing.T) {
 	missingPositive := firstMissingPositive(array)
 	assert.True(t, missingPositive == 2)
 }
+
+func TestPermute(t *testing.T) {
+	nums := []int{}
+	assert.True(t, len(nums) == 0)
+}
